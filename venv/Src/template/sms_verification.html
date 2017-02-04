@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Backend Assignment</title>
+</head>
+<body>
+<form action="/sms_verification/" method="post">
+    <h1>SMS Verification</h1>
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+
+
+{% if not message == None %}
+ <p style="margin-top: 25px;font-style: italic;">{{message}}</p>
+{% endif %}
+</body>
+</html>
